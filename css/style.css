@@ -1,0 +1,229 @@
+
+.flipster {
+    width: 100%;
+    height: 283px;
+    margin: 100px auto 0;
+    background: #dddddd;
+    position: relative;
+}
+.flipster .buttons{
+    position: absolute;
+    top: 50%;
+    width: 430px;
+    left: 50%;
+    margin-left: -215px;
+}
+.flipster .buttons .btn{
+    position: absolute;
+    top:0;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: rgba(128,128,128,.6);
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+}
+.flipster .buttons .btn:hover{
+    background:rgba(255,255,255,.6);
+    color: #000000;
+}
+.flipster .buttons .btn-prev{
+    left: -40%;
+}
+.flipster .buttons .btn-next{
+    right: -40%;
+}
+.flipster .flip-items {
+    width: 430px;
+    height: 283px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    box-sizing: border-box;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flipster .flip-items .flip-item {
+    position: absolute;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.flipster .flip-items .flip-current{
+    z-index: 3;
+    -webkit-transform: translateX(0) translateZ(0) rotateY(0deg);
+    transform: translateX(0) translateZ(0) rotateY(0deg);
+    opacity: 1;
+}
+.flipster .flip-items .flip-hidden{
+    opacity: 1;
+    visibility: hidden;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}
+
+.flipster.flipster-carousel .flip-items .flip-next{
+    opacity: 0.9;
+    z-index: 2;
+    -webkit-transform: translateX(60%) translateZ(0) rotateY(-75deg) scale(0.8);
+    transform: translateX(60%) translateZ(0) rotateY(-75deg) scale(0.8);
+    -webkit-transition-delay: 58.333333333333336ms;
+    -moz-transition-delay: 58.333333333333336ms;
+    -o-transition-delay: 58.333333333333336ms;
+    transition-delay: 58.333333333333336ms;
+}
+.flipster.flipster-carousel .flip-items .flip-feature{
+    opacity: 0.6;
+    z-index: 1;
+    -webkit-transform: translateX(80%) translateZ(0) rotateY(-75deg) scale(0.8);
+    transform: translateX(80%) translateZ(0) rotateY(-75deg) scale(0.7);
+    -webkit-transition-delay: 87.5ms;
+    -moz-transition-delay: 87.5ms;
+    -o-transition-delay: 87.5ms;
+    transition-delay: 87.5ms;
+}
+.flipster.flipster-carousel .flip-items .flip-prev{
+    opacity: 0.9;
+    z-index: 2;
+    -webkit-transform: translateX(-60%) translateZ(0) rotateY(75deg) scale(0.8);
+    transform: translateX(-60%) translateZ(0) rotateY(75deg) scale(0.8);
+    -webkit-transition-delay: 58.333333333333336ms;
+    -moz-transition-delay: 58.333333333333336ms;
+    -o-transition-delay: 58.333333333333336ms;
+    transition-delay: 58.333333333333336ms;
+}
+.flipster.flipster-carousel .flip-items .flip-past{
+    opacity: 0.6;
+    z-index: 1;
+    -webkit-transform: translateX(-80%) translateZ(0) rotateY(75deg) scale(0.8);
+    transform: translateX(-80%) translateZ(0) rotateY(75deg) scale(0.7);
+    -webkit-transition-delay: 87.5ms;
+    -moz-transition-delay: 87.5ms;
+    -o-transition-delay: 87.5ms;
+    transition-delay: 87.5ms;
+}
+.flipster.flipster-coverflow .flip-items .flip-next{
+    opacity: 0.9;
+    z-index: 2;
+    -webkit-transform: translateX(60%) translateZ(0) rotateY(0deg) scale(0.8);
+    transform: translateX(60%) translateZ(0) rotateY(0deg) scale(0.8);
+    -webkit-transition-delay: 58.333333333333336ms;
+    -moz-transition-delay: 58.333333333333336ms;
+    -o-transition-delay: 58.333333333333336ms;
+    transition-delay: 58.333333333333336ms;
+}
+.flipster.flipster-coverflow .flip-items .flip-feature{
+    opacity: 0.6;
+    z-index: 1;
+    -webkit-transform: translateX(80%) translateZ(0) rotateY(0deg) scale(0.8);
+    transform: translateX(80%) translateZ(0) rotateY(0deg) scale(0.7);
+    -webkit-transition-delay: 87.5ms;
+    -moz-transition-delay: 87.5ms;
+    -o-transition-delay: 87.5ms;
+    transition-delay: 87.5ms;
+}
+.flipster.flipster-coverflow .flip-items .flip-prev{
+    opacity: 0.9;
+    z-index: 2;
+    -webkit-transform: translateX(-60%) translateZ(0) rotateY(0deg) scale(0.8);
+    transform: translateX(-60%) translateZ(0) rotateY(0deg) scale(0.8);
+    -webkit-transition-delay: 58.333333333333336ms;
+    -moz-transition-delay: 58.333333333333336ms;
+    -o-transition-delay: 58.333333333333336ms;
+    transition-delay: 58.333333333333336ms;
+}
+.flipster.flipster-coverflow .flip-items .flip-past{
+    opacity: 0.6;
+    z-index: 1;
+    -webkit-transform: translateX(-80%) translateZ(0) rotateY(0deg) scale(0.8);
+    transform: translateX(-80%) translateZ(0) rotateY(0deg) scale(0.7);
+    -webkit-transition-delay: 87.5ms;
+    -moz-transition-delay: 87.5ms;
+    -o-transition-delay: 87.5ms;
+    transition-delay: 87.5ms;
+}
+.no-transition {
+    -webkit-transition-duration: 0ms !important;
+    -moz-transition-duration: 0ms !important;
+    -o-transition-duration: 0ms !important;
+    transition-duration: 0ms !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
